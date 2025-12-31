@@ -1,0 +1,11 @@
+# SQL Server local database files
+*.mdf
+*.ldf
+*.ndf
+
+# Backup and report files
+*.bak
+*~
+~$*
+UpgradeLog*.XML
+UpgradeLog*.htm
