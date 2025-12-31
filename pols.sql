@@ -1,3 +1,5 @@
+-- add data to policies
+
 INSERT INTO policies (
 	training_env,
 	algo,

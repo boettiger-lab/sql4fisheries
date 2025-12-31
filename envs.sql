@@ -1,4 +1,5 @@
--- no need to manually add in env_id bc of auto-increase
+-- add data to environments
+
 INSERT INTO environments (
 	n_observ, observ_noise, utility_fn, url
 )

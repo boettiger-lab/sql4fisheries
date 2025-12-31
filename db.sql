@@ -6,6 +6,14 @@ CREATE DATABASE sql4fisheries;
 
 \c sql4fisheries 
 
+-- %%%%%%%%%%%%%%%%%%%%%%%%
+-- Declare tables in schema
+-- %%%%%%%%%%%%%%%%%%%%%%%%
+
+-- Note: when I eventually add data in, there's no need to 
+-- manually add in primary key bc of auto-increase (GENERATED
+-- AS IDENTITY)
+
 CREATE TABLE environments (
 	env_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	n_observ INTEGER,
