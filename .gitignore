@@ -9,3 +9,8 @@
 ~$*
 UpgradeLog*.XML
 UpgradeLog*.htm
+
+# data files
+data/*
+
+.DS_Store
