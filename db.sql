@@ -29,7 +29,6 @@ CREATE TABLE rewards (
 	pol_id INTEGER,
 	env_id INTEGER,
 	episode INTEGER,
-	pol_name TEXT,
 	reward FLOAT,
 	CONSTRAINT pk_rew
 		PRIMARY KEY (pol_id, env_id, episode),
