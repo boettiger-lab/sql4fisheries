@@ -51,7 +51,6 @@ CREATE TABLE rewards (
 CREATE TABLE episode_state_sims(
 	pol_id INTEGER,
 	env_id INTEGER,
-	episode INTEGER,
 	t INTEGER,
 	variable TEXT,
 	value FLOAT,
@@ -68,7 +67,6 @@ CREATE TABLE episode_state_sims(
 CREATE TABLE episode_action_sims(
 	pol_id INTEGER,
 	env_id INTEGER,
-	episode INTEGER,
 	t INTEGER,
 	variable TEXT,
 	value FLOAT,
