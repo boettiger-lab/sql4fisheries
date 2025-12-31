@@ -13,4 +13,9 @@ UpgradeLog*.htm
 # data files
 data/*
 
+# dump file:
+dump.sql
+
+# this thing:
 .DS_Store
+

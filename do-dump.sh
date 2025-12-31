@@ -1,0 +1,1 @@
+pg_dump -U username -h host -p port dbname > dump.sql
