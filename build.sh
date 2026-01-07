@@ -1,3 +1,6 @@
+# download data
+python download.py
+
 # default postgres db to create sql4fisheries db:
 psql -U postgres -d postgres -f db.sql
 # now run against sql4fisheries
