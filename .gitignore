@@ -22,3 +22,7 @@ dump.sql
 # python env
 .python-version
 .venv/
+
+
+# local FS data locations:
+data.sql
