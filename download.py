@@ -1,7 +1,11 @@
 import pandas as pd
 import os
 
-from huggingface_hub import hf_hub_download, HfApi
+from huggingface_hub import (
+	hf_hub_download, 
+	HfApi, 
+	HfFileSystem
+)
 
 REPO = "boettiger-lab/rl4eco"
 PATH_IN_REPO = "rl4fisheries-reproducing/"
@@ -10,7 +14,7 @@ FS = HfFileSystem()
 SAVE_DATA = "data"
 SAVE_DATA_GLOB = os.path.join(
 	os.path.abspath(__file__),
-	SAVEDATA,
+	SAVE_DATA,
 )
 
 csv_files = [
@@ -44,6 +48,8 @@ def data_type(filename):
 		return 'episode-action'
 	if filename[-9:] == 'state.csv':
 		return 'episode-state'
+	else:
+		return 'unknown'
 
 data_locations = pd.DataFrame([
 	[
@@ -66,7 +72,7 @@ with open('data.sql', 'w') as sqlscript:
 		'CREATE TABLE data_locs (data_type TEXT, loc TEXT)\n'
 	)
 	sqlscript.write(
-		'\copy data_locs(data_type, loc) FROM '
-		os.path.abspath('data/data_loc.csv')
-		" DELIMITER ',' CSV HEADER;"
+		r'\copy data_locs(data_type, loc) FROM ' 
+		+str(os.path.abspath('data/data_loc.csv'))
+		+" DELIMITER ',' CSV HEADER;"
 	)
