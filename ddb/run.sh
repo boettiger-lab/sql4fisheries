@@ -1,0 +1,1 @@
+duckdb fishdb.duckdb < build_db.sql
